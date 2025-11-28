@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <form>
+      <input type="text" id="prompt" placeholder="Enter Your Task for Gemini" required/>
+      <input type="button" id="send" value="Send" />
+    </form>
+  </body>
+  <script>
+    let promptInputBox = document.getElementById('prompt');
+    let sendButton = document.getElementById('send');
+
+    sendButton.addEventListener('click', sendPrompt);
+
+    function sendPrompt () {
+      let prompt = promptInputBox.value;
+
+      google.script.run.askGemini(prompt);
+    }
+  </script>
+</html>
