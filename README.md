@@ -1,0 +1,1 @@
+# Gemini-for-Google-Docs-Apps-Script-Sidebar-Add-on
